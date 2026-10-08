@@ -1,0 +1,49 @@
+# Getting Hands-on with Node.js
+
+## Installing
+Download from nodejs.org (LTS version is the safe pick), then check:
+
+```bash
+node -v
+npm -v
+```
+
+## The REPL
+Run `node` with no arguments to open the REPL (Read, Eval, Print, Loop). Good for quickly testing small bits of code.
+
+```bash
+node
+> 2 + 2
+4
+> _ * 10      # _ holds the last result
+40
+> .help       # list REPL commands
+> .exit       # quit (or press Ctrl+C twice)
+```
+
+## Running a file
+```js
+// app.js
+console.log("Hello from Node");
+```
+```bash
+node app.js
+```
+
+## Global objects
+In the browser the global object is `window`. In Node.js it's `global`.
+
+- `global` is Node-specific.
+- `globalThis` is the standard, works everywhere (Node and browser). Prefer this.
+- `setTimeout()` and `setInterval()` are available globally in Node too.
+
+```js
+console.log(globalThis === global); // true in Node
+
+setTimeout(() => console.log("runs once after 1s"), 1000);
+
+const id = setInterval(() => console.log("runs every 1s"), 1000);
+clearInterval(id); // stop it
+```
+
+Note: a `var` declared at the top of a file does **not** become a property of `global`, because each file is its own module scope (more in the modules notes).
