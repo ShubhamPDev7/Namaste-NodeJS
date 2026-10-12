@@ -1,25 +1,14 @@
-// // function x() {
-// //   const a = 10;
+// const fs = require("fs");
 
-// //   function b() {
-// //     console.log("b");
-// //   }
-// // }
+// console.log("Starting file read");
 
-// // console.log(a);
-
-// (function () {
-//   console.log("IIFE");
-// })();
-
-// (function (module, require) {
-//   // All code of the module runs inside here
-//   function calculatemultiply(a, b) {
-//     const result = a * b;
-//     console.log(result);
+// // Asynchronous file reading
+// fs.readFile("file.txt", "utf8", (err, data) => {
+//   if (err) {
+//     console.error("Error reading file:", err);
+//     return;
 //   }
-//   module.exports = { calculatemultiply };
-// })();
+//   console.log("File content:", data);
+// });
 
-console.log(__filename);
-console.log(__dirname);
+// console.log("File reading initiated, but the program continues");
