@@ -12,3 +12,8 @@ fs.readFile("./file.txt", "utf8", () => {
 });
 process.nextTick(() => console.log("nextTick"));
 console.log("Last line of the file");
+
+
+
+
+
