@@ -34,6 +34,9 @@ them in public so I stay consistent.
 -   [x] [libuv and the Event
     Loop](./episode-09-libuv-event-loop-notes.md): event-loop phases,
     asynchronous I/O, thread pool, microtasks and callback ordering
+-   [x] [Thread Pool in libuv](./episode-10-thread-pool-libuv-notes.md):
+    worker threads, pool size, `UV_THREADPOOL_SIZE`, network I/O,
+    `epoll` and `kqueue`
 
 ### Up next
 
@@ -55,7 +58,8 @@ nodejs-notes/
 ├── 04-commonjs-vs-es-modules.md
 ├── 05-require-under-the-hood.md
 ├── episode-08-v8-js-engine-notes.md
-└── episode-09-libuv-event-loop-notes.md
+├── episode-09-libuv-event-loop-notes.md
+└── episode-10-thread-pool-libuv-notes.md
 ```
 
 Each note covers one topic. I'm keeping the notes organized as I learn
@@ -69,7 +73,8 @@ lot of things (private module scope, `module.exports`, why a module only
 runs once) finally made sense.
 
 I'm now connecting that foundation to what happens inside V8 and how
-Node.js coordinates asynchronous work through libuv and the event loop.
+Node.js coordinates asynchronous work through libuv, the event loop, and
+the thread pool.
 
 ## Where I'm headed
 
